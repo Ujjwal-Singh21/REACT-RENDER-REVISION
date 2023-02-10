@@ -1,8 +1,11 @@
-import React, { useReducer } from 'react'
+import { useReducer } from 'react'
 
+// initialState
 const initialState = ['Warner', 'Smith']
 
+//reducer
 const reducer = (state, action) => {
+
   const newState = [...state]
 
   switch (action) {
@@ -23,13 +26,16 @@ const reducer = (state, action) => {
 }
 
 function ArrayUseReducer () {
+
   const [names, dispatch] = useReducer(reducer, initialState)
 
   console.log('ArrayUseReducer Rendering')
+
   return (
     <div>
+
       <div>
-        {
+            {
                 names.map((name, index) => {
                     return(
                         <li key={index}> {name} </li>

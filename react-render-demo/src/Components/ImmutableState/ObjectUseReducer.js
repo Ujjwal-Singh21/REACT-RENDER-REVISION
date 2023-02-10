@@ -6,8 +6,13 @@ const initialState = {
 }
 
 const reducer = (state, action) => {
-  const newState = { ...state }
+
+  const newState = { 
+    ...state 
+  }
+
   switch (action) {
+
     case 'firstName':
       // Our usual way
       // return { ...state, firstName: state.firstName = 'Ujjwal'}
@@ -32,14 +37,14 @@ const reducer = (state, action) => {
 }
 
 function ObjectUseReducer () {
+
   const [name, dispatch] = useReducer(reducer, initialState)
 
   console.log('ObjectUseReducer Rendering')
+
   return (
     <div>
-      <h2>
-        FirstName : {name.firstName} , LastName : {name.lastName}
-      </h2>
+      <h2> FirstName : {name.firstName} , LastName : {name.lastName} </h2>
       <button onClick={() => dispatch('firstName')}> Change FirstName </button>
       <button onClick={() => dispatch('lastName')}> Change LastName </button>
       <button onClick={() => dispatch('reset')}> Reset Name </button>

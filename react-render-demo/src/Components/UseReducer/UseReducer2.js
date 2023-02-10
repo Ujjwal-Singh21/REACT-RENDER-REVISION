@@ -7,7 +7,9 @@ const initialState = {
 }
 
 const reducer = (state, action) => {
+
   switch (action.type) {
+
     case 'INCREMENT':
       return { count: state.count + action.payload }
 
@@ -23,17 +25,16 @@ const reducer = (state, action) => {
 }
 
 function UseReducerTwo () {
+
   const [count, dispatch] = useReducer(reducer, initialState)
+  console.log('Usereducer 2 render')
+
   return (
     <div>
       <div>
         <h1> Count - {count.count} </h1>
-        <button onClick={() => dispatch({ type: 'INCREMENT', payload: 1 })}>
-          Increment
-        </button>
-        <button onClick={() => dispatch({ type: 'DECREMENT', payload: 1 })}>
-          Decrement
-        </button>
+        <button onClick={() => dispatch({ type: 'INCREMENT', payload: 1 })}> Increment </button>
+        <button onClick={() => dispatch({ type: 'DECREMENT', payload: 1 })}> Decrement </button>
         <button onClick={() => dispatch({ type: 'RESET' })}> Reset </button>
       </div>
     </div>

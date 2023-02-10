@@ -21,28 +21,33 @@ import UseState from './Components/UseState/UseState'
 function App () {
   return (
     <div className='App'>
-      <ContextParent>
+      {/* <ContextParent>
         <ChildA />
-      </ContextParent>
+      </ContextParent> */}
       {/* <ContextParent /> */}
       {/* <ParentSix /> */}
       {/* <ParentFive /> */}
       {/* <ParentFour /> */}
       {/* <ParentThree /> */}
       {/* <ParentTwo /> */}
+
       {/* <GrandParent /> */}
+
       {/* <ParentOne>
         <ChildOne />
       </ParentOne> */}
+
       {/* <ParentOne /> */}
 
       {/* <Parent /> */}
+
       {/* <ArrayUseReducer /> */}
       {/* <ArrayUseState /> */}
       {/* <ObjectUseReducer /> */}
       {/* <ObjectUseState /> */}
-      {/* <UseReducer /> */}
+
       {/* <UseReducerTwo /> */}
+      {/* <UseReducer /> */}
       {/* <UseState /> */}
     </div>
   )

@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 
 const initialState = ['Bruce', 'Clarke']
 
 function ArrayUseState () {
+
   const [persons, setPersons] = useState(initialState)
 
   const handleAddName = () => {
@@ -17,9 +18,11 @@ function ArrayUseState () {
   }
 
   console.log('ArrayUseState Rendering')
+
   return (
     <div>
       <button onClick={handleAddName}> AddName </button>
+      
       {
             persons.map((person, index) => {
               return(

@@ -4,7 +4,7 @@ function Child () {
   console.log('Child Render')
   return (
     <div>
-      <h1> Child Component </h1>
+      <h3> Child Component </h3>
     </div>
   )
 }

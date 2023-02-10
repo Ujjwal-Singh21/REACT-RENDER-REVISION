@@ -4,7 +4,9 @@ import React, { useReducer } from 'react'
 const initialState = 0
 
 const reducer = (state, action) => {
+
   switch (action) {
+    
     case 'INCREMENT':
       return state + 1
 
